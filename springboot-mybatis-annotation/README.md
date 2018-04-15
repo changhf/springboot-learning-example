@@ -1,0 +1,1 @@
+注解方式整合mybatis，所有mybatis相关配置都在dao中配置
