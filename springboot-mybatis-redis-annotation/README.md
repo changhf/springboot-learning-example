@@ -1,0 +1,9 @@
+springboot默认的ConcurrentMapCacheManager作为缓存技术，使用以下三个注解
+1、@CachePut缓存新增的或更新的数据到缓存，其中缓存名称为value指定的值，如baseCityInfo，
+数据的key是传入的参数cityName
+2、@CacheEvict从缓存baseCityInfo中删除key为cityName的数据
+3、@Cacheable缓存key为cityName的数据到缓存baseCityInfo中。
+
+特别说明：如果没有指定key，则方法参数作为key保存到缓存中，如(String cityName)
+
+一般使用EhCache/Guava来替换缓存技术。

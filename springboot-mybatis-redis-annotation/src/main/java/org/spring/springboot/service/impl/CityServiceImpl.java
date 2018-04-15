@@ -1,7 +1,5 @@
 package org.spring.springboot.service.impl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.spring.springboot.domain.City;
 import org.spring.springboot.service.CityService;
 import org.springframework.cache.annotation.CachePut;
@@ -23,17 +21,20 @@ public class CityServiceImpl implements CityService {
     // 模拟数据库存储
     private Map<String, City> cityMap = new HashMap<String, City>();
 
+    @Override
     public void saveCity(City city){
         // 模拟数据库插入操作
         cityMap.put(city.getCityName(), city);
     }
 
+    @Override
     @Cacheable(value = "baseCityInfo")
     public City getCityByName(String cityName){
         // 模拟数据库查询并返回
         return cityMap.get(cityName);
     }
 
+    @Override
     @CachePut(value = "baseCityInfo")
     public void updateCityDescription(String cityName, String description){
         City city = cityMap.get(cityName);
