@@ -1,1 +1,2 @@
 注解方式整合mybatis，所有mybatis相关配置都在dao中配置
+dao需要标记为@Mapper

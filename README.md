@@ -8,22 +8,6 @@ spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固�
 https://github.com/JeffLi1993/springcloud-learning-example
 
 
-## Spring For All 社区
-[Spring For All 社区](http://www.spring4all.com/ "spring4all")是新组建的关于 Spring 的纯技术交流社区（涵盖 Spring Boot、Spring Cloud 等内容），集诸多开源爱好者和技术大牛贡献内容和交流问题。我们不夸大、不装逼、做最纯粹的技术分享！！！
-
-看看我们超强的群众基础，欢迎有兴趣的朋友加入QQ群分享与交流：
-Spring For All 社区 ⑪ 517395240 <br>
-Spring For All 社区 ⑫ 498098401 <br>
-
-博主微信：139-5868-6678
-
-## 作者与学习乐园
-源码地址：我的[GitHub地址](https://github.com/JeffLi1993 "GitHub")、[OSCGit地址](https://git.oschina.net/jeff1993/springboot-learning-example "OSCGit")<br>
-作者：[泥瓦匠BYSocket](http://www.bysocket.com/ "泥瓦匠BYSocket")<br>
-关注微信公众号【泥瓦匠BYSokcet】，及时得到技术文章推送<br>
-![公众号](http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg)
-
-
 ## 一、项目结构
 「Spring Boot 那些事」：[传送门](http://www.bysocket.com/?page_id=1639 "Spring Boot 那些事")<br>
 
@@ -91,6 +75,15 @@ CREATE TABLE `city` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ````
+````
+CREATE DATABASE springbootdb_cluster;
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE user
+(
+id INT(10) unsigned PRIMARY KEY NOT NULL COMMENT '用户编号' AUTO_INCREMENT,
+user_name VARCHAR(25) COMMENT '用户名称',
+description VARCHAR(25) COMMENT '描述'
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 插入基础数据
 ````
 INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
@@ -127,3 +120,20 @@ http://localhost:8080/api/city?cityName=温岭市
 
 推荐
  [《Spring Boot教程与Spring Cloud教程》](https://git.oschina.net/didispace/SpringBoot-Learning "Spring Boot教程与Spring Cloud教程")<br>
+
+
+
+## Spring For All 社区
+[Spring For All 社区](http://www.spring4all.com/ "spring4all")是新组建的关于 Spring 的纯技术交流社区（涵盖 Spring Boot、Spring Cloud 等内容），集诸多开源爱好者和技术大牛贡献内容和交流问题。我们不夸大、不装逼、做最纯粹的技术分享！！！
+
+看看我们超强的群众基础，欢迎有兴趣的朋友加入QQ群分享与交流：
+Spring For All 社区 ⑪ 517395240 <br>
+Spring For All 社区 ⑫ 498098401 <br>
+
+博主微信：139-5868-6678
+
+## 作者与学习乐园
+源码地址：我的[GitHub地址](https://github.com/JeffLi1993 "GitHub")、[OSCGit地址](https://git.oschina.net/jeff1993/springboot-learning-example "OSCGit")<br>
+作者：[泥瓦匠BYSocket](http://www.bysocket.com/ "泥瓦匠BYSocket")<br>
+关注微信公众号【泥瓦匠BYSokcet】，及时得到技术文章推送<br>
+![公众号](http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg)
