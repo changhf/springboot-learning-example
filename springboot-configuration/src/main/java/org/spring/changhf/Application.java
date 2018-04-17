@@ -1,4 +1,4 @@
-package org.spring.springboot;
+package org.spring.changhf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

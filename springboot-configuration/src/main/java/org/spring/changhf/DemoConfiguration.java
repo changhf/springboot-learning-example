@@ -1,13 +1,10 @@
-package org.spring.springboot.config;
+package org.spring.changhf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Created by bysocket on 08/09/2017.
- */
 @Configuration
-public class MessageConfiguration {
+public class DemoConfiguration {
 
     @Bean
     public String message() {
