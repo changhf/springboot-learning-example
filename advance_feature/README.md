@@ -1,0 +1,4 @@
+@EnableScheduling来开启对计划任务的支持
+@Scheduled支持多种类型的计划任务，包括cron,fixDelay,fixRate等
+fixRate属性每隔固定时间执行
+cron属性可按照指定时间执行，cron是Unix和linux系统下的定时任务。
