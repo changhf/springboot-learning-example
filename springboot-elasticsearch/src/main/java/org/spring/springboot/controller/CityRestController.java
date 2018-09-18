@@ -18,15 +18,15 @@ public class CityRestController {
     @Autowired
     private CityService cityService;
 
-    @RequestMapping(value = "/api/city", method = RequestMethod.POST)
+    @PostMapping("/api/city")
     public Long createCity(@RequestBody City city) {
         return cityService.saveCity(city);
     }
 
-    @RequestMapping(value = "/api/city/search", method = RequestMethod.GET)
-    public List<City> searchCity(@RequestParam(value = "pageNumber") Integer pageNumber,
+    @GetMapping("/api/city/search")
+    public List<City> searchCity(@RequestParam(value = "current") Integer current,
                                  @RequestParam(value = "pageSize", required = false) Integer pageSize,
                                  @RequestParam(value = "searchContent") String searchContent) {
-        return cityService.searchCity(pageNumber,pageSize,searchContent);
+        return cityService.searchCity(current,pageSize,searchContent);
     }
 }
