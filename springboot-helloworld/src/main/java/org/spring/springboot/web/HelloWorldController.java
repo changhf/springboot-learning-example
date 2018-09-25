@@ -1,6 +1,7 @@
 package org.spring.springboot.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/data",method = RequestMethod.POST)
     public String sayHello() {
         return "Hello,World!";
     }

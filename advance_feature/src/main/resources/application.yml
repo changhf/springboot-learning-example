@@ -1,0 +1,15 @@
+spring:
+  servlet:
+    multipart:
+#      开启文件上传
+      enabled: true
+#      上传文件超过一定长度时，就先写进临时文件里
+      file-size-threshold: 0
+#      临时文件存放的目录
+      location: d:/usr
+#      单个文件的最大长度
+      max-file-size: 2MB
+#      单次http请求上传的最大长度
+      max-request-size: 10MB
+#      表示当文件和参数被访问时在解析成文件
+      resolve-lazily: false

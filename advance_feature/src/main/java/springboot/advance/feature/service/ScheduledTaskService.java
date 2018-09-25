@@ -11,7 +11,7 @@ import java.util.Date;
  * @version V1.0.0
  * @since 2018/4/22
  */
-@Service
+//@Service
 public class ScheduledTaskService {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 

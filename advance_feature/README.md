@@ -5,3 +5,5 @@
 @Scheduled支持多种类型的计划任务，包括cron,fixDelay,fixRate等
 fixRate属性每隔固定时间执行
 cron属性可按照指定时间执行，cron是Unix和linux系统下的定时任务。
+
+#### 文件上传FileController以及相应的配置

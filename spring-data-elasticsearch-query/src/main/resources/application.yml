@@ -1,6 +1,3 @@
-server:
-  context-path: /
-  port: 8080
 # ES
 spring:
   data:

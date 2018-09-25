@@ -6,7 +6,6 @@ import org.spring.springboot.domain.City;
 import org.spring.springboot.repository.CityRepository;
 import org.spring.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -32,27 +31,28 @@ public class CityESServiceImpl implements CityService {
     @Autowired
     CityRepository cityRepository;
 
+    @Override
     public Long saveCity(City city) {
         City cityResult = cityRepository.save(city);
         return cityResult.getId();
     }
-
+    @Override
     public List<City> findByDescriptionAndScore(String description, Integer score) {
         return cityRepository.findByDescriptionAndScore(description, score);
     }
-
+    @Override
     public List<City> findByDescriptionOrScore(String description, Integer score) {
         return cityRepository.findByDescriptionOrScore(description, score);
     }
-
+    @Override
     public List<City> findByDescription(String description) {
         return cityRepository.findByDescription(description, pageable).getContent();
     }
-
+    @Override
     public List<City> findByDescriptionNot(String description) {
         return cityRepository.findByDescriptionNot(description, pageable).getContent();
     }
-
+    @Override
     public List<City> findByDescriptionLike(String description) {
         return cityRepository.findByDescriptionLike(description, pageable).getContent();
     }
